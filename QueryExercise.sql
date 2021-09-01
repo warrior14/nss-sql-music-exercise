@@ -23,6 +23,14 @@ ON Song.ArtistId = Artist.Id;
 -- Write a SELECT query that lists all the Artists that have a Soul Album
 --Different ways to rename a column/property on a table
 
-SELECT 
-    ArtistName "Artist Name",
-    Name AS
+SELECT
+	ArtistName "Artist Name",
+	Name AS [Genre Name]
+FROM Album
+INNER JOIN Artist
+ON Album.ArtistId = Artist.Id
+INNER JOIN Genre
+ON Album.GenreId = Genre.Id
+WHERE Album.GenreId = 1;
+
+-- Write a SELECT query that lists all the Artists that have a Jazz or Rock Album
