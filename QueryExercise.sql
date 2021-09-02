@@ -34,3 +34,5 @@ ON Album.GenreId = Genre.Id
 WHERE Album.GenreId = 1;
 
 -- Write a SELECT query that lists all the Artists that have a Jazz or Rock Album
+
+
